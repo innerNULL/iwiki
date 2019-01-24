@@ -1,2 +1,0 @@
-# iwiki
-My wiki.
