@@ -1,14 +1,14 @@
 # gitbook on github-page
 
-## 1. First build a respository on github, e.g., iwiki.
+## 1. Building a Respository on Github, e.g., iwiki.
 
-## 2. build a branck called `gh-pages`
-after building this branch, github will automatically serves a github-page for you.
+## 2. Building a Branch Called `gh-pages`
+After building following branch, github will automatically serves a github-page for you.
 ```
-git checkout gh-pages
+git checkout -b gh-pages
 ```
 
-## 3. build a gitbook static website
+## 3. Building Gitbook Static Website Files
 First go back to master branch:
 ```
 git checkout master
@@ -27,4 +27,30 @@ git commit -m "General updates"
 git push origin master
 ```
 
+## 4. Moving Gitbook Static Website Files To `gh-pages` Branch
+First go to `gh-pages` branch by:
+```
+git checkout gh-pages
+```
+Notice this time we don't need `-b` since we have already built this branch.  
+
+After running above codes, we need the static website files in "./_book" located 
+at master branch, so the most directly method is running following codes:
+```
+# The current state is, located at the respository's root path, with `gh-pages`
+# branch. After `git clone`, use the `master_barnch` represents the 
+# respository's path name.
+
+git clone "the respository"
+mv -r ./master_barnch/_book ./
+rm -rf master_barnch
+```
+Now we get all we need, so push to github:
+```
+git add ./*
+git commit -m "Update docs"
+git push original gh-pages
+```
+Congrates! Everything done, you can visit the "Setting" boart to get the url 
+of your github pages.
 
