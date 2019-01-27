@@ -18,6 +18,8 @@ instruction, and run following codes to generate static website files which were
 ```
 gitbook init
 gitbook build
+# Can also use `gitbook serve` to replace `gitbook build` which can let
+# you see your website on localhost.
 ```
 Now we can push all these files to master branch, by the way, the master branch is used for saving your 
 gitbook's source files.
