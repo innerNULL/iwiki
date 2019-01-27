@@ -34,7 +34,7 @@ git checkout gh-pages
 ```
 Notice this time we don't need `-b` since we have already built this branch.  
 
-After running above codes, we need the static website files in "./_book" located 
+After running above codes, we need all the static website files in "./_book" located 
 at master branch, so the most directly method is running following codes:
 ```
 # The current state is, located at the respository's root path, with `gh-pages`
@@ -42,7 +42,7 @@ at master branch, so the most directly method is running following codes:
 # respository's path name.
 
 git clone "the respository"
-mv -r ./master_barnch/_book ./
+mv -r ./master_barnch/_book/* ./
 rm -rf master_barnch
 ```
 Now we get all we need, so push to github:
