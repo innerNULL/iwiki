@@ -41,8 +41,9 @@ at master branch, so the most directly method is running following codes:
 # branch. After `git clone`, use the `master_barnch` represents the 
 # respository's path name.
 
+git rm -r ./*
 git clone "the respository"
-mv -r ./master_barnch/_book/* ./
+mv ./master_barnch/_book/* ./
 rm -rf master_barnch
 ```
 Now we get all we need, so push to github:
