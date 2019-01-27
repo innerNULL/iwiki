@@ -1,10 +1,19 @@
 # Summary
 
 * [Introduction](README.md)
-* [investigate&scheme](investigate&scheme/README.md)
-    * [mixed-precision training implementation scheme](investigate&scheme/mixed-precision_training_implementation_scheme.md)
-    * [Section1.2](investigate&scheme/section1.2.md)
-* [tools using tips](tools_using_tips/README.md)
-    * [git&github](tools_using_tips/git&github/README.md)
-        * [gitbook on github-page](tools_using_tips/git&github/gitbook_on_github-page.md)
+
+-----
+* [Implementation Scheme](implementation_scheme/README.md)
+    * [mixed-precision training implementation scheme](implementation_scheme/mixed_precision_training_implementation_scheme.md)
+
+-----
+* [Tech Tools](tech_tools/README.md)
+    * [Git](tech_tools/git/README.md)
+        * [Gitbook On Github-page](tech_tools/git/gitbook_on_github-page.md)
+
+-----
+* [Paper Reading](paper_reading/README.md)
+    * [Model Compression](paper_reading/model_compression/README.md)
+        * [Quantization](paper_reading/model_compression/quantization/README.md)
+            * [Mixed Precision Training](paper_reading/model_compression/quantization/mixed_precision_training.md)
 

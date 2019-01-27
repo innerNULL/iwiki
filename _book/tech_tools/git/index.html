@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>gitbook on github-page · GitBook</title>
+        <title>Git · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="gitbook_on_github-page.html" />
     
-    <link rel="prev" href="./" />
+    
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -100,12 +102,19 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../../investigate&scheme/">
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../implementation_scheme/">
             
-                <a href="../../investigate&scheme/">
+                <a href="../../implementation_scheme/">
             
                     
-                    investigate&scheme
+                    Implementation Scheme
             
                 </a>
             
@@ -114,25 +123,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../../investigate&scheme/mixed-precision_training_implementation_scheme.html">
+        <li class="chapter " data-level="2.1.1" data-path="../../implementation_scheme/mixed_precision_training_implementation_scheme.html">
             
-                <a href="../../investigate&scheme/mixed-precision_training_implementation_scheme.html">
+                <a href="../../implementation_scheme/mixed_precision_training_implementation_scheme.html">
             
                     
                     mixed-precision training implementation scheme
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.2" data-path="../../investigate&scheme/section1.2.html">
-            
-                <a href="../../investigate&scheme/section1.2.html">
-            
-                    
-                    Section1.2
             
                 </a>
             
@@ -145,12 +141,19 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../">
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
             
                 <a href="../">
             
                     
-                    tools using tips
+                    Tech Tools
             
                 </a>
             
@@ -159,12 +162,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="./">
+        <li class="chapter active" data-level="3.1.1" data-path="./">
             
                 <a href="./">
             
                     
-                    git&github
+                    Git
             
                 </a>
             
@@ -173,16 +176,93 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1.1" data-path="gitbook_on_github-page.html">
+        <li class="chapter " data-level="3.1.1.1" data-path="gitbook_on_github-page.html">
             
                 <a href="gitbook_on_github-page.html">
             
                     
-                    gitbook on github-page
+                    Gitbook On Github-page
             
                 </a>
             
 
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../paper_reading/">
+            
+                <a href="../../paper_reading/">
+            
+                    
+                    Paper Reading
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../paper_reading/model_compression/">
+            
+                <a href="../../paper_reading/model_compression/">
+            
+                    
+                    Model Compression
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../paper_reading/model_compression/quantization/">
+            
+                <a href="../../paper_reading/model_compression/quantization/">
+            
+                    
+                    Quantization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1.1" data-path="../../paper_reading/model_compression/quantization/mixed_precision_training.html">
+            
+                <a href="../../paper_reading/model_compression/quantization/mixed_precision_training.html">
+            
+                    
+                    Mixed Precision Training
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -226,7 +306,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >gitbook on github-page</a>
+        <a href="../.." >Git</a>
     </h1>
 </div>
 
@@ -241,24 +321,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="gitbook-on-github-page">gitbook on github-page</h1>
-<h2 id="1-first-build-a-respository-on-github-eg-iwiki">1. First build a respository on github, e.g., iwiki.</h2>
-<h2 id="2-build-a-branck-called-gh-pages">2. build a branck called <code>gh-pages</code></h2>
-<p>after building this branch, github will automatically serves a github-page for you.</p>
-<pre><code>git checkout gh-pages
-</code></pre><h2 id="3-build-a-gitbook-static-website">3. build a gitbook static website</h2>
-<p>First go back to master branch:</p>
-<pre><code>git checkout master
-</code></pre><p>Then, after installing gitbook and its dependencies, build <code>README.md</code> and <code>SUMMARY.md</code> following gitbook 
-instruction, and run following codes to generate static website files which were located at <code>./_book</code>.</p>
-<pre><code>gitbook init
-gitbook build
-</code></pre><p>Now we can push all these files to master branch, by the way, the master branch is used for saving your 
-gitbook&apos;s source files.</p>
-<pre><code>git add ./*
-git commit -m &quot;General updates&quot;
-git push origin master
-</code></pre>
+                                <h1 id="tools-using-tips">tools using tips</h1>
+
                                 
                                 </section>
                             
@@ -285,10 +349,14 @@ git push origin master
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: git&github">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Tech Tools">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="gitbook_on_github-page.html" class="navigation navigation-next " aria-label="Next page: Gitbook On Github-page">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -297,7 +365,7 @@ git push origin master
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"gitbook on github-page","level":"1.3.1.1","depth":3,"previous":{"title":"git&github","level":"1.3.1","depth":2,"path":"tools_using_tips/git&github/README.md","ref":"tools_using_tips/git&github/README.md","articles":[{"title":"gitbook on github-page","level":"1.3.1.1","depth":3,"path":"tools_using_tips/git&github/gitbook_on_github-page.md","ref":"tools_using_tips/git&github/gitbook_on_github-page.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tools_using_tips/git&github/gitbook_on_github-page.md","mtime":"2019-01-24T07:03:27.271Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-24T07:05:12.902Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git","level":"3.1.1","depth":2,"next":{"title":"Gitbook On Github-page","level":"3.1.1.1","depth":3,"path":"tech_tools/git/gitbook_on_github-page.md","ref":"tech_tools/git/gitbook_on_github-page.md","articles":[]},"previous":{"title":"Tech Tools","level":"3.1","depth":1,"path":"tech_tools/README.md","ref":"tech_tools/README.md","articles":[{"title":"Git","level":"3.1.1","depth":2,"path":"tech_tools/git/README.md","ref":"tech_tools/git/README.md","articles":[{"title":"Gitbook On Github-page","level":"3.1.1.1","depth":3,"path":"tech_tools/git/gitbook_on_github-page.md","ref":"tech_tools/git/gitbook_on_github-page.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tech_tools/git/README.md","mtime":"2019-01-24T07:09:35.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-27T04:34:21.075Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,0 +1,443 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Mixed Precision Training · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../implementation_scheme/">
+            
+                <a href="../../../implementation_scheme/">
+            
+                    
+                    Implementation Scheme
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../implementation_scheme/mixed_precision_training_implementation_scheme.html">
+            
+                <a href="../../../implementation_scheme/mixed_precision_training_implementation_scheme.html">
+            
+                    
+                    mixed-precision training implementation scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../tech_tools/">
+            
+                <a href="../../../tech_tools/">
+            
+                    
+                    Tech Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../../tech_tools/git/">
+            
+                <a href="../../../tech_tools/git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../../tech_tools/git/gitbook_on_github-page.html">
+            
+                <a href="../../../tech_tools/git/gitbook_on_github-page.html">
+            
+                    
+                    Gitbook On Github-page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Paper Reading
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Model Compression
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Quantization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.1.1.1.1" data-path="mixed_precision_training.html">
+            
+                <a href="mixed_precision_training.html">
+            
+                    
+                    Mixed Precision Training
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Mixed Precision Training</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mixed-precision-training">Mixed Precision Training</h1>
+<ul>
+<li>reference:<br>  <a href="https://arxiv.org/abs/1710.03740" target="_blank">https://arxiv.org/abs/1710.03740</a><br>  <a href="https://github.com/NVIDIA/apex" target="_blank">https://github.com/NVIDIA/apex</a><br>  <a href="https://nvidia.github.io/OpenSeq2Seq/html/mixed-precision.html#" target="_blank">https://nvidia.github.io/OpenSeq2Seq/html/mixed-precision.html#</a><br>  <a href="https://devblogs.nvidia.com/apex-pytorch-easy-mixed-precision-training/" target="_blank">https://devblogs.nvidia.com/apex-pytorch-easy-mixed-precision-training/</a> </li>
+</ul>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>The paper &quot;Mixed Precision Training&quot; is easy to read after understanding 
+some underlying computer system knowledge such as data type, so here just 
+introduce some tips and extension of the paper by summary some industrial 
+implementation.  </p>
+<h2 id="2-extension">2. Extension</h2>
+<h3 id="21-loss-scaling">2.1. Loss Scaling</h3>
+<p>As the paper mentioned, loss scaling is really useful when putting the &quot;compressed&quot; 
+parameters into the range in which lower data precision can represent them. This tech 
+could be used in two approach, one is using static loss scaling factor, other is using 
+dynamic loss scaling factor. The first one is easy to understand, now focus on the 
+dynamic one.  </p>
+<p>The paper mentioned &quot;automating loss-scaling factor&quot; at last, the author means, for 
+instance, if some gradients or parameters happened overflow, which means these number 
+is to large to represented by float16, so we should decrease loss-scaling factor, on 
+the other hand, if underflow happens, in this case we should increase loss-scaling 
+factor.  </p>
+<p>OpenSeq2Seq did more on &quot;automating loss-scaling factor&quot;. OpenSeq2Seq implements 
+an extension to the mixed precision recipe that we call <strong>automatic loss scaling</strong>. 
+The optimizer inspects the parameter gradients at each iteration and uses their 
+values to select the loss scale for the next iteration.  Concretely, OpenSeq2Seq 
+has support for two automatic loss scaling algorithms, Backoff and LogNormal scaling.  </p>
+<h4 id="211-backoff-scaling">2.1.1. Backoff Scaling</h4>
+<p>Backoff scaling begins with a large loss scale and checks for overflow in the 
+parameter gradients at the end of each iteration. Whenever there is an overflow, 
+the loss scale decreases by a constant factor (default is 2) and the optimizer will 
+skip the update. Furthermore, if there has been no overflow for a period of time, 
+the loss scale increases by a constant factor (defaults are 2000 iterations and 2, 
+respectively). These two rules together ensure both that the loss scale is as large 
+as possible and also that it can adjust to shifting dynamic range during training.</p>
+<h4 id="212-lognormal-scaling">2.1.2. LogNormal Scaling</h4>
+<p>LogNormal scaling uses gradient statistics, rather than the presence of overflow, 
+to set the loss scale. It keeps a running estimate of the mean and variance of 
+the inter-iteration maximum absolute value of the parameter gradients. It models 
+the inter-iteration maximum as log-normally distributed (hence the name), and then 
+chooses the loss scale for the next iteration s.t. the probability of the maximum 
+overflowing float16 is less than some constant (default is 0.001). In the rare 
+event of an overflow, the optimizer skips the update.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Quantization">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Mixed Precision Training","level":"4.1.1.1.1","depth":4,"previous":{"title":"Quantization","level":"4.1.1.1","depth":3,"path":"paper_reading/model_compression/quantization/README.md","ref":"paper_reading/model_compression/quantization/README.md","articles":[{"title":"Mixed Precision Training","level":"4.1.1.1.1","depth":4,"path":"paper_reading/model_compression/quantization/mixed_precision_training.md","ref":"paper_reading/model_compression/quantization/mixed_precision_training.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"paper_reading/model_compression/quantization/mixed_precision_training.md","mtime":"2019-01-27T04:34:08.526Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-27T04:34:21.075Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
