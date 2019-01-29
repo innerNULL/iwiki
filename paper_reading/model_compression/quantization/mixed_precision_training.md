@@ -41,7 +41,10 @@ the loss scale decreases by a constant factor (default is 2) and the optimizer w
 skip the update. Furthermore, if there has been no overflow for a period of time, 
 the loss scale increases by a constant factor (defaults are 2000 iterations and 2, 
 respectively). These two rules together ensure both that the loss scale is as large 
-as possible and also that it can adjust to shifting dynamic range during training.
+as possible and also that it can adjust to shifting dynamic range during training.  
+
+This scaling method is similiar with "dynamic fixed point" method mentioned in 
+"Training deep neural networks with low precision multiplications".
 
 #### 2.1.2. LogNormal Scaling
 LogNormal scaling uses gradient statistics, rather than the presence of overflow, 
