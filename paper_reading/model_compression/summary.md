@@ -1,0 +1,13 @@
+# Summary
+
+## 1. Paper Summary
+
+### 1.1. PACT- Parameterized Clipping Activation for Quantized Neural Networks
+#### 1.1.1. When Using Lower Precision, When Using Higher
+During some operations which include "averaging", such as the calculation of gradients 
+during back propogation, since averaging has effect of "compensate". 
+
+
+### 1.2. Training deep neural networks with low precision multiplications
+#### 1.2.1. How To Dynamically Control Loss Scale Factor
+Refer to page 3.

@@ -14,6 +14,7 @@
 -----
 * [Paper Reading](paper_reading/README.md)
     * [Model Compression](paper_reading/model_compression/README.md)
+        * [Quantization Summary](paper_reading/model_compression/summary.md)
         * [Quantization](paper_reading/model_compression/quantization/README.md)
             * [Mixed Precision Training](paper_reading/model_compression/quantization/mixed_precision_training.md)
 
