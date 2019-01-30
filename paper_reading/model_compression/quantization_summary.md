@@ -12,5 +12,10 @@ of operations.
 
 
 ### 1.2. Training deep neural networks with low precision multiplications
-#### 1.2.1. How To Dynamically Control Loss Scale Factor
+#### 1.2.1. Key
+Use the idea of "dynamic fixed point", the "dynamic" means the precision of 
+the data flow to different operations has unique shared fixed exponent. Refer 
+to page 3.  
+
+#### 1.2.2. How To Dynamically Control Loss Scale Factor
 Refer to page 3.
