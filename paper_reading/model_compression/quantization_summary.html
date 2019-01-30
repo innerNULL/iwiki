@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Gitbook On Github-page · GitBook</title>
+        <title>Quantization Summary · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../paper_reading/" />
+    <link rel="next" href="quantization/" />
     
     
     <link rel="prev" href="./" />
@@ -148,9 +148,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../">
+        <li class="chapter " data-level="3.1" data-path="../../tech_tools/">
             
-                <a href="../">
+                <a href="../../tech_tools/">
             
                     
                     Tech Tools
@@ -162,9 +162,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1.1" data-path="./">
+        <li class="chapter " data-level="3.1.1" data-path="../../tech_tools/git/">
             
-                <a href="./">
+                <a href="../../tech_tools/git/">
             
                     
                     Git
@@ -176,9 +176,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.1.1.1" data-path="gitbook_on_github-page.html">
+        <li class="chapter " data-level="3.1.1.1" data-path="../../tech_tools/git/gitbook_on_github-page.html">
             
-                <a href="gitbook_on_github-page.html">
+                <a href="../../tech_tools/git/gitbook_on_github-page.html">
             
                     
                     Gitbook On Github-page
@@ -206,9 +206,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../../paper_reading/">
+        <li class="chapter " data-level="4.1" data-path="../">
             
-                <a href="../../paper_reading/">
+                <a href="../">
             
                     
                     Paper Reading
@@ -220,9 +220,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1.1" data-path="../../paper_reading/model_compression/">
+        <li class="chapter " data-level="4.1.1" data-path="./">
             
-                <a href="../../paper_reading/model_compression/">
+                <a href="./">
             
                     
                     Model Compression
@@ -234,9 +234,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1.1.1" data-path="../../paper_reading/model_compression/quantization_summary.html">
+        <li class="chapter active" data-level="4.1.1.1" data-path="quantization_summary.html">
             
-                <a href="../../paper_reading/model_compression/quantization_summary.html">
+                <a href="quantization_summary.html">
             
                     
                     Quantization Summary
@@ -247,9 +247,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.1.2" data-path="../../paper_reading/model_compression/quantization/">
+        <li class="chapter " data-level="4.1.1.2" data-path="quantization/">
             
-                <a href="../../paper_reading/model_compression/quantization/">
+                <a href="quantization/">
             
                     
                     Quantization
@@ -261,9 +261,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1.1.2.1" data-path="../../paper_reading/model_compression/quantization/mixed_precision_training.html">
+        <li class="chapter " data-level="4.1.1.2.1" data-path="quantization/mixed_precision_training.html">
             
-                <a href="../../paper_reading/model_compression/quantization/mixed_precision_training.html">
+                <a href="quantization/mixed_precision_training.html">
             
                     
                     Mixed Precision Training
@@ -319,7 +319,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Gitbook On Github-page</a>
+        <a href="../.." >Quantization Summary</a>
     </h1>
 </div>
 
@@ -334,52 +334,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="gitbook-on-github-page">gitbook on github-page</h1>
-<h2 id="1-building-a-respository-on-github-eg-iwiki">1. Building a Respository on Github, e.g., iwiki.</h2>
-<h2 id="2-building-a-branch-called-gh-pages">2. Building a Branch Called <code>gh-pages</code></h2>
-<p>After building following branch, github will automatically serves a github-page for you.</p>
-<pre><code class="lang-bash">git checkout -b gh-pages
-</code></pre>
-<h2 id="3-building-gitbook-static-website-files">3. Building Gitbook Static Website Files</h2>
-<p>First go back to master branch:</p>
-<pre><code class="lang-bash">git checkout master
-</code></pre>
-<p>Then, after installing gitbook and its dependencies, build <code>README.md</code> and <code>SUMMARY.md</code> following gitbook 
-instruction, and run following codes to generate static website files which were located at <code>./_book</code>.</p>
-<pre><code class="lang-bash">gitbook init
-gitbook build
-<span class="hljs-comment"># Can also use `gitbook serve` to replace `gitbook build` which can let</span>
-<span class="hljs-comment"># you see your website on localhost.</span>
-</code></pre>
-<p>Now we can push all these files to master branch, by the way, the master branch is used for saving your 
-gitbook&apos;s source files.</p>
-<pre><code class="lang-bash">git add ./*
-git commit -m <span class="hljs-string">&quot;General updates&quot;</span>
-git push origin master
-</code></pre>
-<h2 id="4-moving-gitbook-static-website-files-to-gh-pages-branch">4. Moving Gitbook Static Website Files To <code>gh-pages</code> Branch</h2>
-<p>First go to <code>gh-pages</code> branch by:</p>
-<pre><code class="lang-bash">git checkout gh-pages
-</code></pre>
-<p>Notice this time we don&apos;t need <code>-b</code> since we have already built this branch.  </p>
-<p>After running above codes, we need all the static website files in &quot;./_book&quot; located 
-at master branch, so the most directly method is running following codes:</p>
-<pre><code class="lang-bash"><span class="hljs-comment"># The current state is, located at the respository&apos;s root path, with `gh-pages`</span>
-<span class="hljs-comment"># branch. After `git clone`, use the `master_barnch` represents the </span>
-<span class="hljs-comment"># respository&apos;s path name.</span>
-
-git rm -r ./*
-git <span class="hljs-built_in">clone</span> <span class="hljs-string">&quot;the respository&quot;</span>
-mv ./master_barnch/_book/* ./
-rm -rf master_barnch
-</code></pre>
-<p>Now we get all we need, so push to github:</p>
-<pre><code class="lang-bash">git add ./*
-git commit -m <span class="hljs-string">&quot;Update docs&quot;</span>
-git push original gh-pages
-</code></pre>
-<p>Congrates! Everything done, you can visit the &quot;Setting&quot; boart to get the url 
-of your github pages.</p>
+                                <h1 id="quantization-summary">Quantization Summary</h1>
+<h2 id="1-paper-summary">1. Paper Summary</h2>
+<h3 id="11-pact--parameterized-clipping-activation-for-quantized-neural-networks">1.1. PACT- Parameterized Clipping Activation for Quantized Neural Networks</h3>
+<h4 id="111-when-using-lower-precision-when-using-higher">1.1.1. When Using Lower Precision, When Using Higher</h4>
+<p>During some operations which include &quot;averaging&quot;, such as the calculation of gradients 
+during back propogation, since averaging has effect of &quot;compensate&quot;. On the other hand, 
+some operation, such as traditional activation function, which do not include &quot;averaging&quot; 
+operation across batch samples, so we should use higher precision to execute this kind 
+of operations.</p>
+<h3 id="12-training-deep-neural-networks-with-low-precision-multiplications">1.2. Training deep neural networks with low precision multiplications</h3>
+<h4 id="121-key">1.2.1. Key</h4>
+<p>Use the idea of &quot;dynamic fixed point&quot;, the &quot;dynamic&quot; means the precision of 
+the data flow to different operations has unique shared fixed exponent. Refer 
+to page 3.  </p>
+<h4 id="122-how-to-dynamically-control-loss-scale-factor">1.2.2. How To Dynamically Control Loss Scale Factor</h4>
+<p>Refer to page 3.</p>
 
                                 
                                 </section>
@@ -407,12 +377,12 @@ of your github pages.</p>
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Git">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Model Compression">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../paper_reading/" class="navigation navigation-next " aria-label="Next page: Paper Reading">
+                <a href="quantization/" class="navigation navigation-next " aria-label="Next page: Quantization">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -423,7 +393,7 @@ of your github pages.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gitbook On Github-page","level":"3.1.1.1","depth":3,"next":{"title":"Paper Reading","level":"4.1","depth":1,"path":"paper_reading/README.md","ref":"paper_reading/README.md","articles":[{"title":"Model Compression","level":"4.1.1","depth":2,"path":"paper_reading/model_compression/README.md","ref":"paper_reading/model_compression/README.md","articles":[{"title":"Quantization Summary","level":"4.1.1.1","depth":3,"path":"paper_reading/model_compression/quantization_summary.md","ref":"paper_reading/model_compression/quantization_summary.md","articles":[]},{"title":"Quantization","level":"4.1.1.2","depth":3,"path":"paper_reading/model_compression/quantization/README.md","ref":"paper_reading/model_compression/quantization/README.md","articles":[{"title":"Mixed Precision Training","level":"4.1.1.2.1","depth":4,"path":"paper_reading/model_compression/quantization/mixed_precision_training.md","ref":"paper_reading/model_compression/quantization/mixed_precision_training.md","articles":[]}]}]}]},"previous":{"title":"Git","level":"3.1.1","depth":2,"path":"tech_tools/git/README.md","ref":"tech_tools/git/README.md","articles":[{"title":"Gitbook On Github-page","level":"3.1.1.1","depth":3,"path":"tech_tools/git/gitbook_on_github-page.md","ref":"tech_tools/git/gitbook_on_github-page.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tech_tools/git/gitbook_on_github-page.md","mtime":"2019-01-30T01:58:13.939Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T01:58:23.449Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Quantization Summary","level":"4.1.1.1","depth":3,"next":{"title":"Quantization","level":"4.1.1.2","depth":3,"path":"paper_reading/model_compression/quantization/README.md","ref":"paper_reading/model_compression/quantization/README.md","articles":[{"title":"Mixed Precision Training","level":"4.1.1.2.1","depth":4,"path":"paper_reading/model_compression/quantization/mixed_precision_training.md","ref":"paper_reading/model_compression/quantization/mixed_precision_training.md","articles":[]}]},"previous":{"title":"Model Compression","level":"4.1.1","depth":2,"path":"paper_reading/model_compression/README.md","ref":"paper_reading/model_compression/README.md","articles":[{"title":"Quantization Summary","level":"4.1.1.1","depth":3,"path":"paper_reading/model_compression/quantization_summary.md","ref":"paper_reading/model_compression/quantization_summary.md","articles":[]},{"title":"Quantization","level":"4.1.1.2","depth":3,"path":"paper_reading/model_compression/quantization/README.md","ref":"paper_reading/model_compression/quantization/README.md","articles":[{"title":"Mixed Precision Training","level":"4.1.1.2.1","depth":4,"path":"paper_reading/model_compression/quantization/mixed_precision_training.md","ref":"paper_reading/model_compression/quantization/mixed_precision_training.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"paper_reading/model_compression/quantization_summary.md","mtime":"2019-01-30T01:54:46.121Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T01:58:23.449Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
