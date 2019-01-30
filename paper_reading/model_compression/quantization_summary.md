@@ -10,6 +10,13 @@ some operation, such as traditional activation function, which do not include "a
 operation across batch samples, so we should use higher precision to execute this kind 
 of operations.
 
+#### 1.1.2. Clipping Activation Function
+Clipping activation sometimes can has lower training error, but higher validation error.  
+Refer to page 3.
+
+#### 1.1.3 Disadvantage of Similiar Method
+* Deep Learning with Low Precision by Half-wave Gaussian Quantization
+
 
 ### 1.2. Training deep neural networks with low precision multiplications
 #### 1.2.1. Key(How To Dynamically Control Loss Scale Factor)

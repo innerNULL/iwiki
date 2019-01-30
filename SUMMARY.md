@@ -7,9 +7,9 @@
     * [mixed-precision training implementation scheme](implementation_scheme/mixed_precision_training_implementation_scheme.md)
 
 -----
-* [Tech Tools](tech_tools/README.md)
-    * [Git](tech_tools/git/README.md)
-        * [Gitbook On Github-page](tech_tools/git/gitbook_on_github-page.md)
+* [Tools](tools/README.md)
+    * [Git](tools/git/README.md)
+        * [Gitbook On Github-page](tools/git/gitbook_on_github-page.md)
 
 -----
 * [Paper Reading](paper_reading/README.md)
