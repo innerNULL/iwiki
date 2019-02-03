@@ -291,6 +291,103 @@
     
 
     
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../code_reading/">
+            
+                <a href="../../code_reading/">
+            
+                    
+                    Code Reading
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../code_reading/tensorflow/">
+            
+                <a href="../../code_reading/tensorflow/">
+            
+                    
+                    TensorFlow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1.1" data-path="../../code_reading/tensorflow/device_support.md">
+            
+                <span>
+            
+                    
+                    Device Support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../programming_language/">
+            
+                <a href="../../programming_language/">
+            
+                    
+                    Programming Language
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../programming_language/cpp_tips.html">
+            
+                <a href="../../programming_language/cpp_tips.html">
+            
+                    
+                    Cpp Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
 
     <li class="divider"></li>
 
@@ -345,12 +442,25 @@ operation across batch samples, so we should use higher precision to execute thi
 of operations.</p>
 <h4 id="112-clipping-activation-function">1.1.2. Clipping Activation Function</h4>
 <p>Clipping activation sometimes can has lower training error, but higher validation error.<br>Refer to page 3.</p>
-<h4 id="113-disadvantage-of-similiar-method">1.1.3 Disadvantage of Similiar Method</h4>
+<h4 id="113-disadvantage-of-similiar-method">1.1.3. Disadvantage of Similiar Method</h4>
 <ul>
 <li>Deep Learning with Low Precision by Half-wave Gaussian Quantization</li>
 </ul>
-<h3 id="12-training-deep-neural-networks-with-low-precision-multiplications">1.2. Training deep neural networks with low precision multiplications</h3>
-<h4 id="121-keyhow-to-dynamically-control-loss-scale-factor">1.2.1. Key(How To Dynamically Control Loss Scale Factor)</h4>
+<h3 id="12deep-learning-with-limited-numerical-precision">1.2.Deep Learning with Limited Numerical Precision</h3>
+<h4 id="121-ficed-pointed-format-notations">1.2.1. Ficed Pointed Format Notations</h4>
+<ul>
+<li>Representation: \<il, fl\="">. Page 2.</il,></li>
+<li>Representable Range: Page 3.</li>
+<li>Smallest Representable Positive Number: Page 3.</li>
+</ul>
+<h4 id="122-rounding-modes">1.2.2. Rounding Modes</h4>
+<p>Includes Round-to-Nearest, Stochastic-Rounding.</p>
+<h4 id="124-tips">1.2.4. Tips</h4>
+<ul>
+<li>Saturate the result: Page 3.</li>
+</ul>
+<h3 id="13-training-deep-neural-networks-with-low-precision-multiplications">1.3. Training deep neural networks with low precision multiplications</h3>
+<h4 id="131-keyhow-to-dynamically-control-loss-scale-factor">1.3.1. Key(How To Dynamically Control Loss Scale Factor)</h4>
 <p>Use the idea of &quot;dynamic fixed point&quot;, the &quot;dynamic&quot; means the precision of 
 the data flow to different operations has unique shared fixed exponent. Refer 
 to page 3.  </p>
@@ -397,7 +507,7 @@ to page 3.  </p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Quantization Summary","level":"4.1.1.1","depth":3,"next":{"title":"Quantization","level":"4.1.1.2","depth":3,"path":"paper_reading/model_compression/quantization/README.md","ref":"paper_reading/model_compression/quantization/README.md","articles":[{"title":"Mixed Precision Training","level":"4.1.1.2.1","depth":4,"path":"paper_reading/model_compression/quantization/mixed_precision_training.md","ref":"paper_reading/model_compression/quantization/mixed_precision_training.md","articles":[]}]},"previous":{"title":"Model Compression","level":"4.1.1","depth":2,"path":"paper_reading/model_compression/README.md","ref":"paper_reading/model_compression/README.md","articles":[{"title":"Quantization Summary","level":"4.1.1.1","depth":3,"path":"paper_reading/model_compression/quantization_summary.md","ref":"paper_reading/model_compression/quantization_summary.md","articles":[]},{"title":"Quantization","level":"4.1.1.2","depth":3,"path":"paper_reading/model_compression/quantization/README.md","ref":"paper_reading/model_compression/quantization/README.md","articles":[{"title":"Mixed Precision Training","level":"4.1.1.2.1","depth":4,"path":"paper_reading/model_compression/quantization/mixed_precision_training.md","ref":"paper_reading/model_compression/quantization/mixed_precision_training.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"paper_reading/model_compression/quantization_summary.md","mtime":"2019-01-30T06:22:48.914Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T10:54:53.000Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Quantization Summary","level":"4.1.1.1","depth":3,"next":{"title":"Quantization","level":"4.1.1.2","depth":3,"path":"paper_reading/model_compression/quantization/README.md","ref":"paper_reading/model_compression/quantization/README.md","articles":[{"title":"Mixed Precision Training","level":"4.1.1.2.1","depth":4,"path":"paper_reading/model_compression/quantization/mixed_precision_training.md","ref":"paper_reading/model_compression/quantization/mixed_precision_training.md","articles":[]}]},"previous":{"title":"Model Compression","level":"4.1.1","depth":2,"path":"paper_reading/model_compression/README.md","ref":"paper_reading/model_compression/README.md","articles":[{"title":"Quantization Summary","level":"4.1.1.1","depth":3,"path":"paper_reading/model_compression/quantization_summary.md","ref":"paper_reading/model_compression/quantization_summary.md","articles":[]},{"title":"Quantization","level":"4.1.1.2","depth":3,"path":"paper_reading/model_compression/quantization/README.md","ref":"paper_reading/model_compression/quantization/README.md","articles":[{"title":"Mixed Precision Training","level":"4.1.1.2.1","depth":4,"path":"paper_reading/model_compression/quantization/mixed_precision_training.md","ref":"paper_reading/model_compression/quantization/mixed_precision_training.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"paper_reading/model_compression/quantization_summary.md","mtime":"2019-01-30T15:20:10.518Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-01T06:55:52.738Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

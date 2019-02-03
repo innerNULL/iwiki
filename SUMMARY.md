@@ -18,3 +18,12 @@
         * [Quantization](paper_reading/model_compression/quantization/README.md)
             * [Mixed Precision Training](paper_reading/model_compression/quantization/mixed_precision_training.md)
 
+
+* [Code Reading](code_reading/README.md)
+    * [TensorFlow](code_reading/tensorflow/README.md)
+        * [Device Support](code_reading/tensorflow/device_support.md)
+
+
+* [Programming Language](programming_language/README.md)
+    * [Cpp Tips](programming_language/cpp_tips.md)
+
