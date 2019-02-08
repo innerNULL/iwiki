@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Programming Language · GitBook</title>
+        <title>Reinforcement Learning: An Introduction 2ed · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="cpp_tips.html" />
     
-    
-    <link rel="prev" href="../code_reading/tensorflow/device_support.md" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -354,9 +352,9 @@
         
         
     
-        <li class="chapter active" data-level="6.1" data-path="./">
+        <li class="chapter " data-level="6.1" data-path="../programming_language/">
             
-                <a href="./">
+                <a href="../programming_language/">
             
                     
                     Programming Language
@@ -368,9 +366,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.1.1" data-path="cpp_tips.html">
+        <li class="chapter " data-level="6.1.1" data-path="../programming_language/cpp_tips.html">
             
-                <a href="cpp_tips.html">
+                <a href="../programming_language/cpp_tips.html">
             
                     
                     Cpp Tips
@@ -386,9 +384,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="../book_reading/">
+        <li class="chapter " data-level="6.2" data-path="./">
             
-                <a href="../book_reading/">
+                <a href="./">
             
                     
                     Book Reading
@@ -400,9 +398,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.2.1" data-path="../book_reading/reinforcement_learning.html">
+        <li class="chapter active" data-level="6.2.1" data-path="reinforcement_learning.html">
             
-                <a href="../book_reading/reinforcement_learning.html">
+                <a href="reinforcement_learning.html">
             
                     
                     Reinforcement Learning: An Introduction 2ed
@@ -448,7 +446,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Programming Language</a>
+        <a href=".." >Reinforcement Learning: An Introduction 2ed</a>
     </h1>
 </div>
 
@@ -463,8 +461,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>This section include some rarely used or easily confused tip of 
-some programming languages.</p>
+                                <h1 id="book-notes">book notes</h1>
+<p>Refer to &quot;Reinforcement Learning: An Introduction 2ed&quot;.</p>
+<h2 id="5-monte-carlo-methods">5. Monte Carlo Methods</h2>
+<ul>
+<li>Learning From Actual Experience and Simulated Experience(page 113) <ul>
+<li><strong>learning from actual experience</strong><br>In this case, the agent will learning from real world experience, 
+so does not needs any prior knowledges, such as the knowledge 
+of how to calcutate reward/return since the real world will give 
+us the real values of them.</li>
+<li><strong>learning from simulated experience</strong>
+Not as learning from actual experience, in this case we needs 
+prior knowledges such as we mentioned above.</li>
+</ul>
+</li>
+<li><strong>Sample Transition VS Complete Probability Trnsitions</strong>(page 113) <ul>
+<li><strong>Sample Transition</strong><br>The probabilities transition only for the states in sampled states, 
+which means the states space is all the state appered in monte 
+carlo simulation.</li>
+<li><strong>Complete Probability Trnsitions</strong>
+The probabilities transition for all possible states.</li>
+</ul>
+</li>
+<li><strong>episodic task</strong></li>
+</ul>
+<h3 id="52-monte-carlo-estimation-of-action-values">5.2. Monte Carlo Estimation of Action Values</h3>
+<ul>
+<li><strong>With or Wothout Model</strong>(page 118)  <ul>
+<li><strong>With Model</strong><br>(?) Maybe represent with a model for state transition probabilities.</li>
+<li><strong>Without Model</strong>
+The agents can learn policy with a model, for example, maybe a 
+model which can help descript the distribution of state transition 
+probabilities. So obviously, Monte Carlo Estimation is a without 
+model method.</li>
+</ul>
+</li>
+<li><strong>Exploring Start</strong><br>(?) It can not be used when learning from actual interaction since in 
+actual interaction, we can not choice which action to start.</li>
+</ul>
+<h3 id="54-monte-carlo-control-without-exploring-starts">5.4. Monte Carlo Control without Exploring Starts</h3>
+<ul>
+<li><strong>|<em>A</em>(s)|</strong><br><strong><em>A</em>(s)</strong> represents all possible actions, <strong>|<em>A</em>(s)|</strong> represents 
+the number of all possible actions.</li>
+<li><strong>e-greedy VS e-soft</strong>(page 123)<br>(?)</li>
+<li><strong>Optimal Among e-soft Policy</strong><br>(?)</li>
+<li><strong>On-Policy Method</strong><br>There exist a policy pi, which can make a prediction about the 
+probibalities for taking each action on each state.</li>
+</ul>
 
                                 
                                 </section>
@@ -492,14 +535,10 @@ some programming languages.</p>
 
             
                 
-                <a href="../code_reading/tensorflow/device_support.md" class="navigation navigation-prev " aria-label="Previous page: Device Support">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Book Reading">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="cpp_tips.html" class="navigation navigation-next " aria-label="Next page: Cpp Tips">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -508,7 +547,7 @@ some programming languages.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Programming Language","level":"6.1","depth":1,"next":{"title":"Cpp Tips","level":"6.1.1","depth":2,"path":"programming_language/cpp_tips.md","ref":"programming_language/cpp_tips.md","articles":[]},"previous":{"title":"Device Support","level":"5.1.1.1","depth":3,"path":"code_reading/tensorflow/device_support.md","ref":"code_reading/tensorflow/device_support.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"programming_language/README.md","mtime":"2019-02-05T02:50:40.634Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-06T02:52:19.858Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Reinforcement Learning: An Introduction 2ed","level":"6.2.1","depth":2,"previous":{"title":"Book Reading","level":"6.2","depth":1,"path":"book_reading/README.md","ref":"book_reading/README.md","articles":[{"title":"Reinforcement Learning: An Introduction 2ed","level":"6.2.1","depth":2,"path":"book_reading/reinforcement_learning.md","ref":"book_reading/reinforcement_learning.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book_reading/reinforcement_learning.md","mtime":"2019-02-08T15:08:32.008Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-06T02:52:19.858Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

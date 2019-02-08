@@ -27,3 +27,6 @@
 * [Programming Language](programming_language/README.md)
     * [Cpp Tips](programming_language/cpp_tips.md)
 
+* [Book Reading](book_reading/README.md)
+    * [Reinforcement Learning: An Introduction 2ed](book_reading/reinforcement_learning.md)
+
