@@ -23,6 +23,8 @@
     * [TensorFlow](code_reading/tensorflow/README.md)
         * [Device Support](code_reading/tensorflow/device_support.md)
 
+* [Confusing Tips](confusing_tips/confusing_tips.md)
+
 
 * [Programming Language](programming_language/README.md)
     * [Cpp Tips](programming_language/cpp_tips.md)

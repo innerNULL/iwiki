@@ -345,6 +345,19 @@
             
         </li>
     
+        <li class="chapter " data-level="5.2" data-path="../confusing_tips/confusing_tips.html">
+            
+                <a href="../confusing_tips/confusing_tips.html">
+            
+                    
+                    Confusing Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -501,12 +514,54 @@ actual interaction, we can not choice which action to start.</li>
 </ul>
 <h3 id="54-monte-carlo-control-without-exploring-starts">5.4. Monte Carlo Control without Exploring Starts</h3>
 <ul>
-<li><strong>|<em>A</em>(s)|</strong><br><strong><em>A</em>(s)</strong> represents all possible actions, <strong>|<em>A</em>(s)|</strong> represents 
+<li><strong>|<em>A</em>(s)|, ||</strong><br><strong><em>A</em>(s)</strong> represents all possible actions, <strong>|<em>A</em>(s)|</strong> represents 
 the number of all possible actions.</li>
 <li><strong>e-greedy VS e-soft</strong>(page 123)<br>(?)</li>
 <li><strong>Optimal Among e-soft Policy</strong><br>(?)</li>
 <li><strong>On-Policy Method</strong><br>There exist a policy pi, which can make a prediction about the 
 probibalities for taking each action on each state.</li>
+</ul>
+<h3 id="55-off-policy-prediction-via-immportance-sampling">5.5. Off-policy Prediction via Immportance Sampling</h3>
+<ul>
+<li><p><strong>importance-sampling ratio</strong>(page 126)<br>When we calculating the value for a state, s, we need pi(a|s) 
+or b(a|s) to calculate the expected returns, for of-policy 
+prediction, we only has b(a|s), includes {b(at|st)}, but 
+rho(t:T-1) can represents the &quot;factor&quot; to transform b(a|s) 
+to pi(a|s), which means, it is an average amount that can 
+holds pi(a|s) = rho<em>(t:T-1) * b(a|s) for all states visited 
+during a episode. So E[rho</em>(t:T-1) * G_t | S_t=s] = v_pi(s). </p>
+<p>On the other hand, during calculating, the value of pi(a|s) 
+was gotten from last episode, but the value of b(a|s) was 
+gotten from current, but this can also let pi(a|s) converage, 
+since the updated value of b(a|s) can sort of &quot;correct&quot; the 
+value of pi(a|s) since we estimate pi(a|s) = b(a|s) * rho_(t:T-1), 
+and in this operation, the b(a|s) can bring some new information.   </p>
+<p>For instance, &quot;a&quot; should be 2, &quot;a <em> b&quot; should be 4, in last 
+episode, we estimate a = b = 3, in current episode, we estimate 
+b = 2.5, so the estimate of &quot;a </em> b&quot; is now 7.5, relative more 
+close to 4 compare with 3 <em> 3 = 9. Another example, suppose the 
+&quot;a&quot; not changed, which is 4, &quot;b&quot; in 4 episodes are 2.5, 1, 0.5, 
+0.25, so the &quot;a </em> b&quot; are 10, 4, 2, 1, and the average of them 
+are 4.25, so the estimate of &quot;a * b&quot; is more closely to true value.   </p>
+<p>The last easily confused point, in one episode, only limited state 
+will be visited, so in this episode, only these visited states&apos; 
+related infomation will be updated.  </p>
+</li>
+<li><p><strong>importance-sampling ratio</strong>(page 126), breif<br>G is the mainly holder and updator of each state&apos;s value, and 
+rho_(t:T-1) is used for fine tuning G using certain history data.</p>
+</li>
+<li><p><strong>two form of importance sampling</strong>  </p>
+<ul>
+<li><strong>ordinary importance sampling</strong>(page 126)<br>This is just arithmetic mean value of all episoddes&apos; 
+rho_(t:T(t)-1) * G_t.</li>
+<li><strong>weighted importance sampling</strong>(page 127)<br>In this case, we can think the importance-sampling ratio as 
+the &quot;importance&quot; of this state&apos;s G_t in current episode. If 
+it&apos;s larger, which means in this episode, for this state, the 
+real G_t should be more larger than G_t compare the larger 
+degree for this state in other episodes, so this G_t should has 
+larger weight.  </li>
+</ul>
+</li>
 </ul>
 
                                 
@@ -547,7 +602,7 @@ probibalities for taking each action on each state.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Reinforcement Learning: An Introduction 2ed","level":"6.2.1","depth":2,"previous":{"title":"Book Reading","level":"6.2","depth":1,"path":"book_reading/README.md","ref":"book_reading/README.md","articles":[{"title":"Reinforcement Learning: An Introduction 2ed","level":"6.2.1","depth":2,"path":"book_reading/reinforcement_learning.md","ref":"book_reading/reinforcement_learning.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book_reading/reinforcement_learning.md","mtime":"2019-02-08T15:08:32.008Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-06T02:52:19.858Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Reinforcement Learning: An Introduction 2ed","level":"6.2.1","depth":2,"previous":{"title":"Book Reading","level":"6.2","depth":1,"path":"book_reading/README.md","ref":"book_reading/README.md","articles":[{"title":"Reinforcement Learning: An Introduction 2ed","level":"6.2.1","depth":2,"path":"book_reading/reinforcement_learning.md","ref":"book_reading/reinforcement_learning.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book_reading/reinforcement_learning.md","mtime":"2019-02-13T02:00:41.427Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-12T15:18:45.918Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
