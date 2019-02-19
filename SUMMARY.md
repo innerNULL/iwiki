@@ -31,4 +31,5 @@
 
 * [Book Reading](book_reading/README.md)
     * [Reinforcement Learning: An Introduction 2ed](book_reading/reinforcement_learning.md)
+    * [CSAPP](book_reading/csapp.md)
 
